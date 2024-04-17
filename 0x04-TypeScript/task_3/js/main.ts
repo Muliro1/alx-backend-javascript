@@ -1,6 +1,6 @@
 
 import { RowID, RowElement } from './interface';
-import CRUD from './crud';
+import * as CRUD from  './crud' ;
 
 const row: RowElement = {
   firstName: 'Guillaume',
