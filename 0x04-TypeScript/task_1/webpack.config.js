@@ -18,7 +18,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js"]
+    extensions: [".tsx", ".ts", ".js"],
   },
   devServer: {
     contentBase: "./dist"
@@ -33,5 +33,12 @@ module.exports = {
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist")
-  }
+  },
+  stats: { children: false }, //to fix the error-Entrypoint undefined=index.html  
+  plugins:[  
+      new HtmlWebpackPlugin({  
+         template: './index.html'  
+      })  
+  ]
 };
+
