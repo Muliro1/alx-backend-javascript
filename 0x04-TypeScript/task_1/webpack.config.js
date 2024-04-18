@@ -17,11 +17,12 @@ module.exports = {
       }
     ]
   },
+  mode: 'development',
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
   },
   devServer: {
-    contentBase: "./dist"
+    static: "./dist"
   },
   plugins: [
     new ForkTsCheckerWebpackPlugin(),
