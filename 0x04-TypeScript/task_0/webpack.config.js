@@ -21,8 +21,9 @@ module.exports = {
     extensions: [".tsx", ".ts", ".js"]
   },
   devServer: {
-    contentBase: "./dist"
+    static: "./dist"
   },
+  mode: "development",
   plugins: [
     new ForkTsCheckerWebpackPlugin(),
     new CleanWebpackPlugin(),
